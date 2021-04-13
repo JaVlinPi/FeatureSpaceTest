@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+.postcodeLookup {
+  border: 0.1rem black solid;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.postcodeInfo {
+  border: 0.1rem black solid;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: paleturquoise;
+}
+
+.postcodeInfo.nearest {
+  background-color: palegoldenrod;
+}
+
+.postcodeInfo.subheader {
+  background-color: palegreen;
+}
+
+.postcodeError {
+  border: 0.1rem black solid;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: palevioletred;
+}
