@@ -44,6 +44,7 @@ function PostcodeLookup(props)
                     {'Enter Postcode: '}
                     <input
                         type="text"
+                        aria-label="input"
                         value={postcode}
                         onChange={(e) => {
                             setPostcode(e.target.value);
