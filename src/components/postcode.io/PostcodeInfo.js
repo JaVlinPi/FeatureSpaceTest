@@ -1,5 +1,6 @@
 import React from "react";
 import PostcodeError from "./PostcodeError";
+import SinglePostcodeInfo from "./SinglePostcodeInfo";
 
 function PostcodeInfo(props)
 {
@@ -8,13 +9,9 @@ function PostcodeInfo(props)
             <div className={''}>
                 {props.result.map((postcodeInfo,index)=>{
                     return([
-                        <div key={index} className={'postcodeInfo '+(index===0?'':'nearest')}>
-                            <div>{'Postcode: '+postcodeInfo.postcode}</div>
-                            <div>{'Country: '+postcodeInfo.country}</div>
-                            <div>{'Region: '+postcodeInfo.region}</div>
-                        </div>
+                        <SinglePostcodeInfo index={index} {...postcodeInfo}/>
                         , index === 0 ? <div key={-1} className='postcodeInfo subheader'>Nearest Postcodes</div> : null
-                    ])
+                    ]);
                 })}
             </div>
         );
